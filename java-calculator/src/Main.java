@@ -30,17 +30,22 @@ public static void main(String[] args) {
     }
 
 
-    if (operator.equals("+")) {
-        System.out.print(numero1 + numero2);
-    }
-    else if (operator.equals("-")) {
-        System.out.print(numero1 - numero2);
-    }
-    else if (operator.equals("*")) {
-        System.out.print(numero1 * numero2);
-    }
-    else if (operator.equals("/")) {
-        System.out.print(numero1 / numero2);
+    switch (operator) {
+        case "+":
+            System.out.print(numero1 + numero2);
+            break;
+
+        case "-":
+            System.out.print(numero1 - numero2);
+            break;
+
+        case "*":
+            System.out.print(numero1 * numero2);
+            break;
+
+        case "/":
+            System.out.print(numero1 / numero2);
+            break;
         }
     input.close();
 }
