@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-public static void main(String[] args) {
+public class Main {
+
+    public static void main(String[] args) {
 
     Scanner input = new Scanner(System.in);
 
@@ -11,7 +13,7 @@ public static void main(String[] args) {
         return;
     }
 
-    int numero1 = input.nextInt();
+    int number1 = input.nextInt();
 
     System.out.print("Type another number: ");
 
@@ -20,7 +22,7 @@ public static void main(String[] args) {
         return;
     }
 
-    int numero2 = input.nextInt();
+    int number2 = input.nextInt();
 
     System.out.print("Type the Mathematical Operators (+ - * /): ");
     String operator = input.next();
@@ -29,23 +31,23 @@ public static void main(String[] args) {
         System.out.print("Please type a valid operator (+ - * /)");
     }
 
-
     switch (operator) {
         case "+":
-            System.out.print(numero1 + numero2);
+            System.out.print(Calculator.add(number1, number2));
             break;
 
         case "-":
-            System.out.print(numero1 - numero2);
+            System.out.print(Calculator.subtract(number1, number2));
             break;
 
         case "*":
-            System.out.print(numero1 * numero2);
+            System.out.print(Calculator.multiplication(number1, number2));
             break;
 
         case "/":
-            System.out.print(numero1 / numero2);
+            System.out.print(Calculator.divide(number1, number2));
             break;
         }
     input.close();
+    }
 }
